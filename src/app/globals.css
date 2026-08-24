@@ -7,7 +7,7 @@
 /* ═══════════════════════════════════════════════════════════════════════
    HxHashFavicon — Design tokens
 
-   HxHunt brand palette (#F6F4F0 / #697565 / #3C3D37 / #1E201E) — shadcn's
+   HxHunt brand palette (#F6F4F0 / #5a7a52 / #3C3D37 / #1E201E) — shadcn's
    own variable names are kept as-is (Button/Card/Input/Tabs are wired to
    them), only the values change. Secondary/muted/border tones are mixed
    from the four brand colors; destructive is the one off-palette hue,
@@ -92,7 +92,7 @@
   --card-foreground: #1e201e;
   --popover: #ffffff;
   --popover-foreground: #1e201e;
-  --primary: #697565;
+  --primary: #5a7a52;
   --primary-foreground: #f6f4f0;
   --secondary: #ece9e2;
   --secondary-foreground: #1e201e;
@@ -101,12 +101,12 @@
   /* shadcn's "accent" is a neutral hover highlight, not the brand color —
      kept as a soft accent tint so ghost/outline hovers read as
      "highlighted", not as a second, competing brand color. */
-  --accent: #69756514;
-  --accent-foreground: #697565;
+  --accent: #5a7a5214;
+  --accent-foreground: #5a7a52;
   --destructive: #a3342b;
   --border: #ded9d0;
   --input: #ded9d0;
-  --ring: #697565;
+  --ring: #5a7a52;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -114,12 +114,12 @@
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: #f6f4f0;
   --sidebar-foreground: #1e201e;
-  --sidebar-primary: #697565;
+  --sidebar-primary: #5a7a52;
   --sidebar-primary-foreground: #f6f4f0;
-  --sidebar-accent: #69756514;
-  --sidebar-accent-foreground: #697565;
+  --sidebar-accent: #5a7a5214;
+  --sidebar-accent-foreground: #5a7a52;
   --sidebar-border: #ded9d0;
-  --sidebar-ring: #697565;
+  --sidebar-ring: #5a7a52;
 }
 
 .dark {

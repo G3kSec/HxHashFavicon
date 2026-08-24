@@ -11,7 +11,6 @@ import {
   Copy,
   Check,
   Terminal,
-  Github,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -111,16 +110,11 @@ export default function FaviconHasher() {
       <header className="sticky top-0 z-10 border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5">
           <div className="flex items-baseline gap-px font-mono text-[0.9375rem] font-semibold tracking-tight">
-            <span className="text-primary">0x</span>
+            <span className="text-primary">Hx</span>
             <span>HashFavicon</span>
           </div>
 
           <div className="flex items-center gap-2">
-            <a href="https://github.com/G3kSec/0xHashFavicon" target="_blank" rel="noreferrer">
-              <Button variant="outline" size="icon-sm" className="cursor-pointer border-border text-muted-foreground hover:text-primary hover:border-primary/40">
-                <Github className="size-4" />
-              </Button>
-            </a>
             <ThemeToggle />
           </div>
         </div>
@@ -141,14 +135,14 @@ export default function FaviconHasher() {
               </p>
             </div>
 
-            <Card className="border-border shadow-none py-0 overflow-hidden gap-0">
+            <Card className="border-border border-t-2 border-t-primary shadow-none py-0 overflow-hidden gap-0">
               {/* Terminal chrome */}
               <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-border bg-muted/50">
                 <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
                 <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
                 <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
                 <span className="label !normal-case !tracking-normal ml-3 truncate">
-                  ~/0xhashfavicon/target-input.sh
+                  ~/hxhashfavicon/target-input.sh
                 </span>
               </div>
 
@@ -161,10 +155,16 @@ export default function FaviconHasher() {
               <CardContent className="space-y-6 pb-6">
                 <Tabs defaultValue="url" className="w-full">
                   <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="url" className="cursor-pointer font-mono text-xs">
+                    <TabsTrigger
+                      value="url"
+                      className="cursor-pointer font-mono text-xs data-[state=active]:text-primary"
+                    >
                       <Globe className="size-3.5" /> URL Target
                     </TabsTrigger>
-                    <TabsTrigger value="upload" className="cursor-pointer font-mono text-xs">
+                    <TabsTrigger
+                      value="upload"
+                      className="cursor-pointer font-mono text-xs data-[state=active]:text-primary"
+                    >
                       <Upload className="size-3.5" /> Upload File
                     </TabsTrigger>
                   </TabsList>
@@ -293,7 +293,7 @@ export default function FaviconHasher() {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="label flex items-center gap-2">
-                <History className="w-3.5 h-3.5" /> scan_history.log
+                <History className="w-3.5 h-3.5 text-primary" /> scan_history.log
               </h2>
               {history.length > 0 && (
                 <Button
@@ -309,7 +309,7 @@ export default function FaviconHasher() {
 
             <div className="space-y-2">
               {history.length === 0 ? (
-                <div className="text-center p-8 border border-dashed border-border rounded-lg text-muted-foreground text-xs font-mono">
+                <div className="text-center p-8 border border-dashed border-primary/30 rounded-lg text-muted-foreground text-xs font-mono">
                   no scans yet
                 </div>
               ) : (
@@ -350,23 +350,28 @@ export default function FaviconHasher() {
           <div className="flex items-center gap-2">
             <Terminal className="h-3.5 w-3.5 text-primary" />
             <p className="font-mono text-sm tracking-tight">
-              <span className="text-primary">0x</span>
+              <span className="text-primary">Hx</span>
               <span className="text-foreground">HashFavicon</span>
               <span className="text-muted-foreground"> — by </span>
               <a
-                href="https://github.com/G3kSec"
+                href="https://hxhunt.com"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-primary transition-colors"
               >
-                G3kSec
+                HxHunt
               </a>
             </p>
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="https://github.com/G3kSec" target="_blank" rel="noreferrer" className="label hover:!text-primary transition-colors">
-              GitHub
+            <a
+              href="https://www.linkedin.com/company/hxhunt"
+              target="_blank"
+              rel="noreferrer"
+              className="label hover:!text-primary transition-colors"
+            >
+              LinkedIn
             </a>
             <p className="label nums">&copy; {new Date().getFullYear()}</p>
           </div>

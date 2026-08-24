@@ -3,6 +3,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import murmurhash3 from 'murmurhash3js';
 import { isPrivateUrl, resolveAndValidate } from '@/lib/url-validation';
+import { safeHttpAgent, safeHttpsAgent } from '@/lib/safe-agent';
 
 const MAX_FAVICON_SIZE = 2 * 1024 * 1024; // 2 MB
 
@@ -47,6 +48,8 @@ export async function POST(req: Request) {
       timeout: 5000,
       maxRedirects: 3,
       maxContentLength: 5 * 1024 * 1024,
+      httpAgent: safeHttpAgent,
+      httpsAgent: safeHttpsAgent,
       beforeRedirect: (options) => {
         const href = String(options.href || `${options.protocol}//${options.hostname}`);
         const redirectUrl = new URL(href);
@@ -90,6 +93,8 @@ export async function POST(req: Request) {
       timeout: 5000,
       maxRedirects: 3,
       maxContentLength: MAX_FAVICON_SIZE,
+      httpAgent: safeHttpAgent,
+      httpsAgent: safeHttpsAgent,
       beforeRedirect: (options) => {
         const href = String(options.href || `${options.protocol}//${options.hostname}`);
         const redirectUrl = new URL(href);

@@ -1,4 +1,4 @@
-# 0xHashFavicon
+# HxHashFavicon
 
 ![Next.js](https://img.shields.io/badge/Next.js-000-white?style=flat-square&logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
@@ -21,8 +21,8 @@ Next.js 15, Tailwind CSS v4, shadcn/ui, MurmurHash3.js, Axios, Cheerio.
 ## Usage
 
 ```bash
-git clone https://github.com/g3ksec/0xhashfavicon.git
-cd 0xhashfavicon
+git clone https://github.com/g3ksec/hxhashfavicon.git
+cd hxhashfavicon
 npm install
 npm run dev
 ```

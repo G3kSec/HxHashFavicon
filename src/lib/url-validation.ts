@@ -10,7 +10,7 @@ const PRIVATE_RANGES = [
   { prefix: '100.64.', mask: (ip: string) => { const b = parseInt(ip.split('.')[1]); return b >= 64 && b <= 127; } },
 ];
 
-function isPrivateIPv4(ip: string): boolean {
+export function isPrivateIPv4(ip: string): boolean {
   for (const range of PRIVATE_RANGES) {
     if (ip.startsWith(range.prefix)) {
       return range.mask ? range.mask(ip) : true;
@@ -19,7 +19,7 @@ function isPrivateIPv4(ip: string): boolean {
   return false;
 }
 
-function isPrivateIPv6(ip: string): boolean {
+export function isPrivateIPv6(ip: string): boolean {
   const lower = ip.toLowerCase();
   if (lower === '::1' || lower === '::') return true;
   if (lower.startsWith('fc') || lower.startsWith('fd')) return true;

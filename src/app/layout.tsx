@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "0xHashFavicon | by G3kSec",
+  title: "HxHashFavicon | by HxHunt",
   description: "Favicon Fingerprinting for Asset Discovery",
 };
 

@@ -7,11 +7,18 @@
 /* ═══════════════════════════════════════════════════════════════════════
    HxHashFavicon — Design tokens
 
-   HxHunt brand palette (#F6F4F0 / #5a7a52 / #3C3D37 / #1E201E) — shadcn's
-   own variable names are kept as-is (Button/Card/Input/Tabs are wired to
-   them), only the values change. Secondary/muted/border tones are mixed
-   from the four brand colors; destructive is the one off-palette hue,
-   needed for error states.
+   HxHunt brand palette — TRIAL 4, dark mode rework #2 — shadcn's own
+   variable names are kept as-is (Button/Card/Input/Tabs are wired to
+   them), only the values change. Lightening the dark background last
+   round didn't fix it — the real issue was the muted, brownish-red
+   accent (#BD4444) reading as murky against an earthy background. This
+   round goes the other way: a true near-black, Material-style
+   background (#121212) with clean neutral (non-olive) greys, and a
+   genuinely more saturated red (#E5252B — picked so white button text
+   still clears WCAG AA, which a fully pure #FF0000 would not). Light
+   mode is untouched — it was already approved with #BD4444. Destructive
+   stays its own muted red (#a3342b / #e0665c). The favicon is excluded
+   from this trial — do not change it here.
    ═══════════════════════════════════════════════════════════════════════ */
 
 @theme inline {
@@ -92,7 +99,7 @@
   --card-foreground: #1e201e;
   --popover: #ffffff;
   --popover-foreground: #1e201e;
-  --primary: #5a7a52;
+  --primary: #bd4444;
   --primary-foreground: #f6f4f0;
   --secondary: #ece9e2;
   --secondary-foreground: #1e201e;
@@ -101,12 +108,12 @@
   /* shadcn's "accent" is a neutral hover highlight, not the brand color —
      kept as a soft accent tint so ghost/outline hovers read as
      "highlighted", not as a second, competing brand color. */
-  --accent: #5a7a5214;
-  --accent-foreground: #5a7a52;
+  --accent: #bd444414;
+  --accent-foreground: #bd4444;
   --destructive: #a3342b;
   --border: #ded9d0;
   --input: #ded9d0;
-  --ring: #5a7a52;
+  --ring: #bd4444;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -114,46 +121,46 @@
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: #f6f4f0;
   --sidebar-foreground: #1e201e;
-  --sidebar-primary: #5a7a52;
+  --sidebar-primary: #bd4444;
   --sidebar-primary-foreground: #f6f4f0;
-  --sidebar-accent: #5a7a5214;
-  --sidebar-accent-foreground: #5a7a52;
+  --sidebar-accent: #bd444414;
+  --sidebar-accent-foreground: #bd4444;
   --sidebar-border: #ded9d0;
-  --sidebar-ring: #5a7a52;
+  --sidebar-ring: #bd4444;
 }
 
 .dark {
-  --background: #1e201e;
-  --foreground: #f6f4f0;
-  --card: #262820;
-  --card-foreground: #f6f4f0;
-  --popover: #262820;
-  --popover-foreground: #f6f4f0;
-  --primary: #8c9686;
-  --primary-foreground: #1e201e;
-  --secondary: #2e3029;
-  --secondary-foreground: #f6f4f0;
-  --muted: #2e3029;
-  --muted-foreground: #a3a69c;
-  --accent: #8c96861a;
-  --accent-foreground: #8c9686;
+  --background: #121212;
+  --foreground: #f5f5f5;
+  --card: #1a1a1a;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1a1a;
+  --popover-foreground: #f5f5f5;
+  --primary: #e5252b;
+  --primary-foreground: #ffffff;
+  --secondary: #212121;
+  --secondary-foreground: #f5f5f5;
+  --muted: #212121;
+  --muted-foreground: #9e9e9e;
+  --accent: #e5252b1a;
+  --accent-foreground: #e5252b;
   --destructive: #e0665c;
-  --border: #34362f;
-  --input: #34362f;
-  --ring: #8c9686;
+  --border: #2e2e2e;
+  --input: #2e2e2e;
+  --ring: #e5252b;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #262820;
-  --sidebar-foreground: #f6f4f0;
-  --sidebar-primary: #8c9686;
-  --sidebar-primary-foreground: #1e201e;
-  --sidebar-accent: #8c96861a;
-  --sidebar-accent-foreground: #8c9686;
-  --sidebar-border: #34362f;
-  --sidebar-ring: #8c9686;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #e5252b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5252b1a;
+  --sidebar-accent-foreground: #e5252b;
+  --sidebar-border: #2e2e2e;
+  --sidebar-ring: #e5252b;
 }
 
 @layer base {

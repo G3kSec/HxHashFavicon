@@ -21,8 +21,8 @@ Next.js 15, Tailwind CSS v4, shadcn/ui, MurmurHash3.js, Axios, Cheerio.
 ## Usage
 
 ```bash
-git clone https://github.com/g3ksec/hxhashfavicon.git
-cd hxhashfavicon
+git clone https://github.com/G3kSec/HxHashFavicon.git
+cd HxHashFavicon
 npm install
 npm run dev
 ```
